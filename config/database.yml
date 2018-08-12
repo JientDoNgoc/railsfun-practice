@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: jientdongoc
+  password: ''
+
+development:
+  <<: *default
+  database: railsfun_practice_development
+
+test:
+  <<: *default
+  database: railsfun_practice_test
+
+production:
+  <<: *default
+  database: railsfun_practice_production
+  username: railsfun_practice
+  password: <%= ENV['RAILSFUN_PRACTICE_DATABASE_PASSWORD'] %>
