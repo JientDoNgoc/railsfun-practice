@@ -1,0 +1,17 @@
+table
+  thead
+    tr
+      th title
+      th description
+      th level
+      th country
+      th price
+      th categor
+  tbody
+    tr
+      td = @product.title
+      td = @product.description
+      td = @product.level
+      td = @product.country
+      td = @product.price
+      td = @product.category.try(:title)

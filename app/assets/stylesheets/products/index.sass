@@ -1,0 +1,19 @@
+$border: 1px solid black
+$color: red
+$font-size: 20px
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radis: $radius
+  -border-radius: $radius
+
+#products_index
+  h1
+    border: $border
+    color: $color
+    font-size: $font-size
+    @include border-radius(20px)
+  .title
+    a
+      color: red

@@ -1,0 +1,8 @@
+= semantic_form_for @product do |p|
+  = p.input :title
+  = p.input :description
+  = p.input :price, min: 0.01
+  = p.input :level, as: :select, collection: Product.level.options
+  = p.input :published
+  = p.input :category
+  = p.action :submit

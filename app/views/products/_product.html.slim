@@ -1,0 +1,7 @@
+tr
+  td.title = link_to product.title, product_path(product)
+  td = product.price
+  td = product.category.title
+  td = link_to 'edit', edit_product_path(product)
+  td = link_to 'Delete', product_path(product), method: :delete,
+   data: { confirm: 'Are you sure?' }

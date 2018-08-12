@@ -1,0 +1,13 @@
+#products_index
+  h1 List all product
+  = link_to 'Create', new_product_path
+  table.table
+    thead.thead-dark
+      tr
+        th title
+        th price
+        th category
+        th edit
+        th delete
+    tbody
+        = render partial: 'product', collection: @products
