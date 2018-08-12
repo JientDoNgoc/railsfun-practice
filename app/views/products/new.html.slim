@@ -4,5 +4,6 @@
   = p.input :price, min: 0.01
   = p.input :level, as: :select, collection: Product.level.options
   = p.input :published
+  = p.input :country, as: :select, collection: Product.country.options
   = p.input :category
   = p.action :submit

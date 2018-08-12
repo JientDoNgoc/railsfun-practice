@@ -37,14 +37,13 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-     params_require(:product).permit( :title,
+     params.require(:product).permit( :title,
                                       :description,
                                       :price,
                                       :published,
                                       :level,
                                       :country,
-                                      :category_id)
-  end
+                                      :category_id)end
 
   def get_product
     @product = Product.find(params[:id])
