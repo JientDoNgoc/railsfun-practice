@@ -8,4 +8,21 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    header
+      .container
+        nav.navbar-expand-lg.navbar.navbar-dark.bg-dark
+          h3.navbar-brand Jient Railsfun
+    .container
+      .col-md-3.sidebar
+        .row
+          ul.nav.flex-column.nav-pills[role="tablist" aria-orientation="vertical"]
+            li.nav-link.active[data-toggle="pill" href="#" role="tab" ]
+              h4 Category
+            li.nav-link[data-toggle="pill" href="#" role="tab" ]
+              h4 Profile
+            li.nav-link[data-toggle="pill" href="#" role="tab" ]
+              h4 Products
+      .col-md-9.content
+        - flash.each do |name,msg|
+          = content_tag :div, msg, class: name
+        = yield
